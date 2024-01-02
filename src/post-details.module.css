@@ -1,0 +1,45 @@
+.postTitle {
+    width: fit-content;
+    transition: font-weight ease-in-out 150ms;
+    will-change: font-weight;
+    cursor: pointer;
+}
+
+.postTitle:hover,
+.postTitle.opened {
+    font-weight: 700;
+}
+
+.postBody {
+    display: grid;
+    width: fit-content;
+    grid-template-rows: 0fr;
+    margin: 0 0 10px 0;
+    transition: grid-template-rows ease-out 300ms;
+}
+
+.postBody form {
+    width: fit-content;
+    overflow: hidden;
+}
+
+.postTitle.opened + .postBody {
+    grid-template-rows: 1fr;
+}
+
+.postBody input,
+.postBody textarea {
+    display: block;
+    width: 90%;
+}
+
+.postBody textarea {
+    height: 5em;
+}
+
+.preview {
+    margin-top: 0;
+    font-style: italic;
+    font-size: .7em;
+    width: fit-content;
+}
